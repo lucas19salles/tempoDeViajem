@@ -9,7 +9,7 @@ let today = moment();
 let dateDiff = today - departureDate;
 
 let chosenOption = prompt(
-  "Escolha como gostaria de exibir o tempo de partida\n1 - Segundos\n2 - Minutos\n3 - Horas\n4 - Dias"
+  "Escolha como gostaria de exibir o tempo de partida\n1 - Segundos\n2 - Minutos\n3 - Horas\n4 - Dias\n5 - Anos"
 );
 
 if (chosenOption == "1") {
@@ -24,6 +24,9 @@ if (chosenOption == "1") {
 } else if (chosenOption == "4") {
   let daysOfDeparture = Math.round(dateDiff / 1000 / 3600 / 24);
   alert(`Tempo de vôo ${daysOfDeparture} dias`);
+} else if (chosenOption == "5") {
+  let yearsOfDeparture = Math.round(dateDiff / 1000 / 3600 / 24 / 365);
+  alert(`Faz ${yearsOfDeparture} anos que você está voando.`);
 } else {
   alert("Opção Invalido");
 }
